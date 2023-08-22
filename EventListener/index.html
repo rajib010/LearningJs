@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<style>
+    .container {
+        height: 200px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding-top: 100px;
+        font-size: 40px;
+    }
+    .container2{
+        background-color: gold;
+        color: black;
+    }
+</style>
+
+<body>
+    <div class="container" id="cont">This is the container</div>
+
+    <!-- js codes -->
+    <script>
+
+        function id(elementId){
+            return document.getElementById(elementId);
+        }
+
+        function clas(className){
+            return document.getElementsByClassName(className);
+        }
+
+        clas("container")[0].addEventListener("click", (event)=>{
+            // document.getElementById("cont").style.background="green";
+            // document.getElementsByClassName("container")[0].classList.toggle("container2");
+            document.getElementById("cont").className="container2";
+        // this can also be written as 
+            // event.target.className="container2";
+
+
+            // events can be removed using remove method...
+
+        })
+
+
+    </script>
+</body>
+
+</html>

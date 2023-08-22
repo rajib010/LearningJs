@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="text">
+
+    </div>
+
+    <script>
+        //append child will help to add something to the existing element in html without interfering with the html codes...
+       const newElement= document.createElement("h2");
+       const newText= document.createTextNode('This is the content of the new text');
+       newElement.appendChild(newText);
+       document.querySelector("#text").appendChild(newElement);
+
+       //insertBefore will help to insert something in before something
+
+       target.insertBefore('what??', where);
+    </script>
+</body>
+</html>

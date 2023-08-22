@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Adjacent</title>
+</head>
+<body>
+
+
+    <Script>
+        //they are similar to appendchild and insertBefore
+        // but unlike the former they help us to insertElements by creating it at the same instant...
+
+        //we have four specific positions
+        //beforebegin, afterbegin, beforeend, afterend  
+
+        target.insertAdjacentElement("beforebegin",whattoadd)// will create and insert the certain html elements only
+        target.insertAdjacentHtml("afterbegin", whatTOADD)// will create and insert the certain html elements with their contents also
+        target.insertAdjacentText("afterend",whattoadd)//create and append text node
+    </Script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+    //parentElement and parentNodes
+    document.getElementById("something").parentElement;// this will return  the parent element of the specified element
+    document.getElementById("somthing").parentNode;// similar to parentELement, but is different in the way that it will always return something that even if it is null like space, comments,
+
+    //Children and childNodes
+    document.getElementById("something").children; // returns an array that contains the list of children contained by the element
+    document.getElementById("something").childNodes; //similar but returns the text as well 
+
+    //firstChild and lastChild
+    document.getElementById("something").firstChild; //will return the first text/element that is contained inside the mentioned id like space, comment 
+    document.getElementById("something").lastChild; //will return the last text/element that is contained inside the mentioned id like space, comment
+
+    //firstElementChild and lastElementChild
+    document.getElementById('something').firstElementChild;//will return the first html element that is contained inside the mentioned id
+    document.getElementById('something').lastElementChild;//will return the last html element
+
+    //nextSibling and previousSibling
+    document.getElementById('something').nextSibling;//
+    document.getElementById('something').previousSibling;//
+
+    //nextSibling and previousSibling
+    document.getElementById('something').nextElementSibling;// return next html tags
+    document.getElementById('something').previousElementSibling;// return previous html tags
+</script>
+    <script src="index.js"></script>
+</body>
+</html>

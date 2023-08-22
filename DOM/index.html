@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM everything</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // targeting methods....
+        /* 
+
+        there are three main methods of targeting 
+        1. by id = document.getElementById('');
+            there can be only one id in the html file....
+
+
+        2. by class name= document.getElementsByClassName('')[index];
+            there can be more than one class in the html file...
+            this returns the array of the class that has been found while searching...
+            so you can target the particular class by providing the index...
+
+
+        3. by tag= document.getElementsByTagName('');
+            this also returns an array of the tags that has been selected..
+            similar to the class name...
+            there can be many tags in html page...
+        
+        4. document targets all the html codes..
+
+        5. document.all[index] tagrets the tags whose index has been defined...
+
+        6. document.head= tagets the head and everything inside head tag
+
+        7. document.title= targets the title of page
+
+        8. document.body= targets all the tags inside the body...
+
+        9. document.links= targets all the anchor tags....
+
+        10. document.images = targets all the images in the html file...
+
+        11. document.forms= targets all the forms in the file....
+
+        12. document.doctype = returns the doctype of html...
+
+        13.document.URL= returns the url of the file....
+
+        14. document.domain= returns the domain of the website...
+
+        15. document.baseURI= returns the whole of the url....      
+        */
+
+
+        // get and set methods
+
+        /*
+        getting the value ...
+            .innerText= returns the text that is written inside the specfied tag/id
+            .innerHTML= returns all the html tags inside the specified tag/id...
+
+            .getAttribute(value)= returns the value inside attribute of the element ...
+            .getAttributeNode(val)= returns the property name and its value...
+            .Attributes()= return an object of the attributes that are defined in the element...
+                        .value  to get the value of the object..
+                        .name   to get the name of the object...
+
+        setting the value...
+
+        //changing the values
+            .innerText= enters the value only in the text format without adding any further ..
+            .innerHTML= enter the value inside an html tag that was previously defined...
+
+        // changing the attributes...
+            .setAttribute(which , what value)= takes two parameters, the name of the attribute and its value to be changed...
+                                                this will help in change the attribute of the element
+            .attributes[index].value= what to do....
+                                    this will return the array of all the attributes that are present in the documnet
+            .removeAttribute(name)= returns the attribute of the element
+        */
+
+
+        //query selector
+        /*
+        .querySelector(". or # according to situtation")= will only select the first query....
+        .querySelectorAll()= will select all the queries....
+        */
+
+        //css styling
+        /*
+        we should not write the name of attributes as in CSS using - hyphen, we should remove the hyphen
+        and capitalize the first letter that comes after the hyphen, using the camelCase...
+        
+        document.querySelector("#header").style.color;
+                this will return the color that has been applied to the header id....
+
+        .className = "name of the class to be set"...
+        
+        .classList()= will return the array of the classes that are to be applied
+                        some of the avaialble methods of class list are ,
+                        .add("all","to","add");
+                        .remove("all","to","remove");
+                        .toggle("class") help to add and remove function back to back on the click...
+                        .contains("class") returns boolean value if the class exist or not
+                        .item(index) returns the name of the class that is in the mentioned index
+                        .length() returns the number of classes that are being used...
+
+
+        */
+
+    </script>
+</body>
+
+</html>

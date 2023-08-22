@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+</head>
+
+<body>
+    <form action="" method="post" onsubmit="submitFunction()">
+        Name:<input type="text" id="fname" oninput="inputFunction(this)" oninvalid="alert('Please enter your first name')"> <br> <br>
+        Address: <input type="text" onselect="selectFunction(this)"> <br> <br>
+        <select id="country" onchange="selectFunction(this)">
+            <option value="Nepal">Nepal</option>
+            <option value="India">India</option>
+            <option value="China">China</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Bangladesh">Bangladesh</option>
+        </select>
+        <br> <br>
+        <input type="submit" value="submit">
+    </form>
+    <div id="text" style="border: 1px solid red;"></div>
+    <script>
+        //onfocus function will help to do things with the input type as they are clicked...
+        //onblur function will help to perform action with the input after they have been disselected...
+        //oninput function will help to do things with the input on the instant they are entered....
+
+        //example of oninput function...
+        //   function inputFunction(element){
+        //     var x= document.querySelector('#fname').value;
+        //     document.getElementById("text").innerText=x;
+        //   }
+
+        //onchange function will work after you have changed the certain input ....
+        // function selectFunction(element) {
+        //     var y = element.value;
+        //     document.getElementById("text").innerHTML =`You have selected  ${y}`;
+        // }
+
+        //onselect function will be triggered after you have selected something form the input text field
+            // function selectFunction(element){
+            //     document.write('You cannot select this text....')
+            // }
+        
+
+            //onsubmit will trigger after you have submitted the form, used with the form tag   
+            // function submitFunction(){
+            //     document.write('You have submitted the function')
+            // }
+
+
+            //oninvalid will trigger when something invalid will occur
+
+    </script>
+</body>
+
+</html>

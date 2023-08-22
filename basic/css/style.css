@@ -1,0 +1,30 @@
+/* counter program */
+/* #labelCounter   {
+    display: block;
+    font-size: 400px;
+    text-align: center;
+} */
+
+
+body{
+    height: auto;
+    width: auto;
+    background-color: green;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h1{
+    color: goldenrod;
+}
+#button-id{
+    width: 150px;
+    padding: 10px;
+    background-color: goldenrod;
+    color: green;
+    font-weight: bolder;
+    border: none;
+    border-radius: 2px;
+}

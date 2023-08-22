@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval and Timeout</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box"></div>
+    <button onclick="stop()">Stop</button>
+
+    <script>
+        //setInterval will take two parameters, function name and time in (ms);
+        // the function will run after each millisecond everytime...
+
+        // var a = 0;
+
+        // var runAnimation = setInterval(moveRight, 1000);
+        // function moveRight() {
+        //     a = a + 10;
+
+        //     if (a == 200) {
+        //         clearInterval(runAnimation);// to stop the animation
+        //     } else {
+        //         var target = document.querySelector("#box");
+        //         target.style.width = a + 'px';
+        //     }
+        // }
+
+
+        //set timeout will only run once unlike set Interval
+        var width = document.querySelector("#box").style.width.value
+
+        let start = setTimeout(increaseWidth(), 2000);
+
+        function increaseWidth() {
+            document.querySelector("#box").style.width = 500 + 'px';
+        }
+
+        function stop(){
+            clearTimeout(start);
+        }
+
+
+    </script>
+</body>
+
+</html>

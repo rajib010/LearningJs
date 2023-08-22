@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace & remove Child</title>
+</head>
+<body>
+    
+
+    <script>
+
+        var target= document.querySelector("#list");
+        oldElement=target.children[0];
+        var newElement= document.createElement("li");
+        newText= document.createTextNode('This is the new element of the list');
+        newElement.appendChild(newText)        
+        target.removeChild(whichOne);//remove the child of an element specified in the html
+        target.replaceChild(newElement,oldElement);// takes two parameter to replace the element of a child of a element
+    </script>
+</body>
+</html>
