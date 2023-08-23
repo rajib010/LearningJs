@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+
+<body onresize="heightWidth()">
+
+    <button onclick="openFunction()">Open Window</button>
+    <button onclick="closeFunction()">Close Window</button>
+
+
+    <script>
+        // function heightWidth(){
+        //     console.clear()
+        //     let a= window.innerHeight;
+        //     console.log(a);
+        // }
+
+        // let mywindow;
+        // function openFunction() {
+        //     mywindow = window.open("https://www.google.com", "_blank", "width=500px,height=200px");// the last two are the optional parameters...
+        //     // there are various methods like _blank, _parent etc. search about them....
+        // }
+        // function closeFunction(){
+        //     mywindow.close();   
+        // }
+        
+
+        // there are two functions 
+        //.moveTo(x,y) location to move the window to the certain position after it has been created...
+                // works with absolute position
+        //moveBy(x,y) works with relative position...
+
+
+        //to resize the window to  specific height and width
+            //window.resizeTo(x,y);this will implement the specified width
+            //window.resizeBy(x,y); this will add the specified width to the existing width
+
+        //scrollBy and scrollTo() methods in js to scroll the webpage without using the existing scrollBar
+        
+        //if we are to provide vertical scroll bar, we should give y axis value 
+        // for horizontal one vice versa
+
+
+        // pageYoffSet and pageXoffSet methods will show how much we have scrolled in the given webpage
+
+        //offsetTop and offsetLeft will show how much the given element has taken margin from top and left
+
+        //scrollTop and scrollLeft will show how much we have scrolled from the certain point mentioned
+
+        //scrollWidth and scrollHeight will show the extent to which we can scroll to see the data ...
+
+        //offsetWidth and offsetHeight will return the width and height of elements in pexels including padding, border and scrollbar;
+
+        //clientWidth and clientHeight will return the width and height of elements excluding other .....
+
+        //  clientX and clientY will show the coordinates of the mouse in viewport
+
+        //pageX and pageY will show the coordinates of the mouse in a div   
+
+        //screenX and screenY will give the coordinates of mouse in whole screen not only the viewport
+        
+        //offsetX and offsetY will give the coordinates of mouse inside a div or element
+    </script>
+</body>
+
+</html>
