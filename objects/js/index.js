@@ -72,13 +72,26 @@
 
 // using the map method in objects
 
-let arr = [
-    { firstName: 'Rahul', lastName: 'Bhosle' },
-    { firstName: 'Nikita', lastName: 'Chadda' },
-    { firstName: 'Jasmine', lastName: 'Willams' }
-]
+// let arr = [
+//     { firstName: 'Rahul', lastName: 'Bhosle' },
+//     { firstName: 'Nikita', lastName: 'Chadda' },
+//     { firstName: 'Jasmine', lastName: 'Willams' }
+// ]
 
-giveName = x => x.firstName + " " + x.lastName + "<br>";
-let new_arr = arr.map(giveName).join(" ");
+// giveName = x => x.firstName + " " + x.lastName + "<br>";
+// let new_arr = arr.map(giveName).join(" ");
 
-document.write(new_arr);
+// document.write(new_arr);
+
+
+//destructing the objects
+
+let info = {
+    name: 'Rajib',
+    age: 20,
+    address: 'jhapa'
+}
+let {name, age, address} = info;// here we should have same name as it is in the properties of the object,
+                                //otherwise it will show undefined...
+console.log(age);
+console.log(name);

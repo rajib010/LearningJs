@@ -193,15 +193,42 @@ array.map() == returns a new array by running the function in every element of  
 // let b= a.map(element=>element*10)
 
 // print(b);
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-mulTen=number=>number*10;
-new_arr = arr.map(mulTen);
-document.write(new_arr);
+// var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// mulTen=number=>number*10;
+// new_arr = arr.map(mulTen);
+// document.write(new_arr);
 
 
 /* we can convert a string into an array by using the method of JSON.parse(nameOfString)
 and then reconvert the array into the string by using JSON.stringify(nameOfArray)*/
 
+
+// spread operator
+
+// function myFunction(name, ...arr) {
+//         console.log(`hello Mr ${name}.`);
+//         let sum = 0;
+//         for (let i = 0; i < arr.length; i++) {
+//                 sum += arr[i];
+//         }
+//         console.log(`The sum of the numbers is ${sum}`);
+// };
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// myFunction("rajib", ...numbers)
+
+
+//destructing of array..
+
+// let info = ['Ram', 20, 'Ayodhya'];
+// let [name, age, city] = info;
+// console.log(`Mr ${name} of ${age} is from ${city}.`);
+
+// function info([name, age ,address]){
+//         console.log(`Hello Mr. ${name} of ${age} Years from ${address}`);
+// }
+// info(['Rajib',21,'Jhapa'])
 
 
 
