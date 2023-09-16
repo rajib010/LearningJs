@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>The content will be shown below</h1>
+
+    <div class="contents">
+        <div class="news">
+
+        </div>
+    </div>
+    <button id="loadBtn">Click me</button>
+
+
+
+    <!-- js codes -->
+    <script>
+        const contents = document.querySelector(".contents")
+        const newsBox = document.querySelector(".news");
+        //this will execute the code after the button is clicked
+        loadBtn.addEventListener("click", function () {
+            //xml object is initiated
+            let xml = new XMLHttpRequest();
+            xml.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    const response= JSON.parse(this.responseText);
+                    
+                    for (let i = 0; i <response.length; i++) {
+                        newsBox.innerHTML += `
+                                                <h1>${response[i].title}</h1>
+                                                <h4>${response[i].body}</h4>`;
+                    }
+
+                } else if (this.readyState == 4 && this.status == 404) {
+                    contentLocation.innerText = "Page not found";
+                }
+            }
+            xml.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
+            xml.send();
+        })
+    </script>
+</body>
+
+</html>
