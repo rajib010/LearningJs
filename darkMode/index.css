@@ -1,0 +1,24 @@
+:root{
+    --background-color-light:#ffffff;
+    --text-color-light: #000000;
+    ---background-color-dark: #121212;
+    --text-color-dark: #ffffff;
+}
+
+
+body{
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode{
+    background-color: var(---background-color-dark);
+    color: var(--text-color-dark);
+}
+
+#toggleBtn{
+    padding: 2vw;
+    width: 10vw;
+    margin: 10vw 10vw 10vw 10vw;
+}
