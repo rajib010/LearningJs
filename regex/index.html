@@ -1,20 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regex</title>
 </head>
-<body>
 
+<body>
+    <form action="">
+        Username
+        <input type="text" id="username" placeholder="Enter your name" autocomplete="off" spellcheck="false">
+        <p id="message"></p>
+        <button type="submit">Submit</button>
+    </form>
 
 
     <script>
 
+
         //here we will be learning about the regular expressions in js
 
         //regexr.com can be used to learn regex operation
+
+        //modifiers 
+        /*/somthing/g   performs global match
+        /something/i performs case insensitive match
+        /something/m performs multiline match
+        /*
+
+
+        //using brackets for range of expressions
+        /*
+        [abc] find any characters between the brackets...
+        [^abc] find any characters not between the brackets...
+        [0-9] find any digits between the brackets...
+        [^0-9] find any digits not between the brackets...
+        (a|b) find any of the characters specified...
+        */
+
+        //use of  metaCharacters with their meanings
+
+        /*
+        . find a single character, except a new line or line terminator
+        \w find a word character
+        \W find a non-word character
+        \d find a digit character
+        \D find a non-digit character
+        \s find a whitespace character
+        \S find a non-whitespace character
+        \b find the match at the beginning\end of word
+        \B find the match but not at the beginning or the end of the word
+        \0 find a null character
+        \n find a new line character
+        \f find a form feed character
+        \r find a carriage return character
+        \t find a tab character
+        \v find a vertical tab character
+        \xxx find the character specified by an octal number xxx
+        \xdd find the character specified by an hexadecimal number dd
+        \udddd find the unicode character specified by hexadecimal number dddd
+
+        */
+
+
+        //quantifiers
+
+        /*
+        n+ matches any string that contains at least one n
+        n* matches any string that contains zero or more occurance of n
+        n? matches any string that contains zero or one occurance of n
+        n{X} matches any string that contains a sequence of X n's
+        n{X,Y} matches any string that contains a sequence of X to Y n's
+        n{X,} matches any string that contains a sequence of atleast X n's
+        n$ matches any string that contains n at the end of it
+        ^n matches any string that contains n at the beginning of it
+        ?=n matches any string that is followed by specific string n
+        ?!n matches any string that is not followed by a specific string n
+        */
+
+
+
+        //some examples
+
+
+        document.querySelector("#username").addEventListener("input", () => {
+            const user = document.querySelector("#username").value
+            const reg = /^[a-zA-Z .]{3,20}$/;
+            let xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    if (reg.test(user)) {
+                        document.querySelector("#message").innerHTML = " "
+                    } else {
+                        document.querySelector("#message").innerHTML = "Enter correct name."
+                    }
+                }
+            }
+
+
+            xhr.open('GET', 'index.html', true);
+            xhr.send();
+
+        })
+
+
+
+
     </script>
-    
+
 </body>
+
 </html>

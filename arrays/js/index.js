@@ -239,10 +239,13 @@ and then reconvert the array into the string by using JSON.stringify(nameOfArray
 
 
 
+const numbers = [45, 4, 9, 16, 25];
+// let sum = numbers.reduceRight((total,value)=>total+value, 0);
+// let value = numbers.every((e)=>e>1);
+// let someValue = numbers.some((e)=>e>40);
+// let element = numbers.findIndex((e) => e > 40);
 
-
-
-
+log(element);
 
 
 
